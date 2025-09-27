@@ -24,6 +24,15 @@ spring:
           predicates:
             - Path=/api/recommendations/**
 
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway,routes,metrics
+
 eureka:
   client:
     service-url:
